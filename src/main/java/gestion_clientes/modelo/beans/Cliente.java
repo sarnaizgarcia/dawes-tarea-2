@@ -7,6 +7,7 @@ public class Cliente implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
+	static private int serie = 1;
 	private int idUsuario;
 	private String userName;
 	private String passwordUsuario;
@@ -16,21 +17,23 @@ public class Cliente implements Serializable {
 	private int enabled;
 	private Date fechaAlta;
 	
-	public Cliente(int idUsuario, String userName, String passwordUsuario, String emailUsuario, String nombreUsuario,
-			String direccionUsuario, int enabled, Date fechaAlta) {
+	public Cliente(String userName, String passwordUsuario, String emailUsuario, String nombreUsuario,
+			String direccionUsuario, Date fechaAlta) {
 		super();
-		this.idUsuario = idUsuario;
+		this.idUsuario = serie++;
 		this.userName = userName;
 		this.passwordUsuario = passwordUsuario;
 		this.emailUsuario = emailUsuario;
 		this.nombreUsuario = nombreUsuario;
 		this.direccionUsuario = direccionUsuario;
-		this.enabled = enabled;
+		this.enabled = 0;
 		this.fechaAlta = fechaAlta;
 	}
 
 	public Cliente() {
 		super();
+		this.idUsuario = serie++;
+		this.enabled = 0;
 	}
 
 	public int getIdUsuario() {
