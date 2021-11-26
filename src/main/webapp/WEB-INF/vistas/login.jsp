@@ -8,9 +8,10 @@
 <title>Tarea 2 - DAWES</title>
 </head>
 <body>
-	
-	<h1>Bienvenido a Eventos Web</h1>
-		
-	Clientes
+	<form action="/login" method="post">
+		<p>Usuario<input type="text" name="usuario" ></p>
+		<p>Contraseña<input type="text" name="password" ></p>
+		<p><input type="submit" value="Enviar"></p>
+	</form>		
 </body>
 </html>

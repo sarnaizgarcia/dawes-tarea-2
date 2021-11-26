@@ -163,5 +163,4 @@ public class Cliente implements Serializable {
 				+ direccionUsuario + ", enabled=" + enabled + ", fechaAlta=" + fechaAlta + "]";
 	}
 	
-	
 }

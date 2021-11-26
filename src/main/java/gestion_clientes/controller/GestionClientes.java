@@ -1,17 +1,23 @@
 package gestion_clientes.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import gestion_clientes.modelo.repository.IntCliente;
+
 @Controller
 @RequestMapping("/clientes")
 public class GestionClientes {
+//	@Autowired
+//	private IntCliente iCliente;
 	
-	@GetMapping("/")
+	@GetMapping("/login")
 	public String acceso() {
-		return "clientes";
+		return "login";
 	}
-
+	
+	
 }
